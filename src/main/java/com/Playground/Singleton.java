@@ -5,6 +5,9 @@ public class Singleton {
     private static Singleton instance;
 
     private Singleton(){
+        if(instance!=null){
+            throw new RuntimeException("Use getInstance() method to create");
+        }
         // private constructor to prevent instantiation
     }
 
